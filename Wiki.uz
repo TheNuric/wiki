@@ -1,0 +1,46 @@
+import wikipedia 
+import webbrowser
+import time 
+
+qo = '\033[31m'        
+so = '\033[93m'        
+yo = '\033[92m'        
+bold = '\033[01m'       
+cyan = '\033[96m'        
+Black = '\033[0;30m'      
+Green ="\033[0;32m"        
+Blue ="\033[0;34m"         
+BBlue ="\033[1;34m"        
+Purple ="\033[0;35m"       
+White ="\[\033[0;37m\]"        
+y = '\033[92m' 
+s = '\033[93m' 
+q = '\033[91m' 
+o = '\033[0m' 
+
+print(Green,"Salom Quydagilardan birini tanlang : \n  1️⃣ - 𝚠𝚒𝚔𝚒𝚙𝚎𝚍𝚒𝚊 🛰️   \n  2️⃣ -𝕨𝕚𝕜𝕚𝕡𝕖𝕕𝕚𝕒 𝕙𝕒𝕢𝕚𝕕𝕒 🌐   \n  3️⃣ - 𝑻𝑬𝑳𝑬𝑮𝑹𝑨𝑴 👨‍💻   ")
+
+try:
+    insert = int(input("  Kiriting >>> "))
+except ValueError or NameError:
+    print(s,"Harf kiritmang ❌   ")    
+    print("  Faqat 1,2,3 dan birini kiriting ✅   ")
+    print(bold,"Qaytadan urining 🔄   ")
+
+if insert == 1:
+    savol = input("Nima haqida ma'lumot olmoqchisiz kiriting   ")
+    wikipedia.set_lang("uz")
+    print(Purple,"Kuting.....")
+    try:
+        print(wikipedia.summary(savol))
+    except :
+        print("     Notog'ri wiki   ")    
+        print(yo,"Qidiriloyatgan wikini to'g'ri yozing ")
+if insert == 2:
+    print(BBlue,"Vikipediya — koʻp tillik, erkin, onlayn ensiklopediya. \nU koʻngillilar jamoasi tomonidan ochiq hamkorlik hamda vikiga\n tayanuvchi tahrir tizimi asosida yoziladi va yuritiladi. \nUshbu loyiha 15-yanvar 2001-yil mutaxassislarga moʻljallangan \nNupediaga toʻldiruvchi sifatida yaratilib, \nhozirda uni notijorat Wikimedia Foundation tashkiloti boshqaradi. ")    
+if insert == 3:
+    print(cyan," @ANONIM_HACKER_007 \n   ANONIM HACKER")
+    time.sleep(1.5)
+    webbrowser.open_new_tab("https://t.me/ANONIM_HACKER_007")
+elif insert >= 4 :
+    print("Bunday buyrug' mavjud emas 1,2,3 dan birini kiriting \nQaytadan urining")
